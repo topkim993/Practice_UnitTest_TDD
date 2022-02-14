@@ -6,25 +6,15 @@
 import XCTest
 
 class LottoMachineTests: XCTestCase {
+    
+    let lottoMachine = LottoMachine()
+    
+    func test_1에서_45_사이의_숫자를_넣으면_true를_반환한다() {
+        let input = [1, 2, 3, 4, 5, 6]
+        let expectation = true
         
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let result = lottoMachine.isValidLottoNumbers(of: input)
+        
+        XCTAssertEqual(result, expectation)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
